@@ -1,679 +1,397 @@
-/*!
- * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 body {
-    padding-top: 80px;
+    font-weight: 400;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    font-size: 10.71pt;
-    font-weight: 300;
+    padding-top: 70px;
 }
-h1 {
-    font-size: 35px;
-    font-weight: 400;
+
+/* Navbar and footer (global) styling */
+.navbar-fixed-top .nav {
+    padding: 15px 0;
 }
-h2 {
-    font-size: 29.4px;
-    font-weight: 400;
+.navbar {
+    background-color: white;
+    border-width: thin;
+    -webkit-transition: .2s;
 }
-h3 {
-    font-size: 21px;
-    font-weight: 400;
+.navbar-gray {
+    background-color: rgb(248,248,248);
+}
+.navbar a {
+    color: black;
+}
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+.navbar-header .icon-bar {
+    background-color: black;
+}
+.navbar-nav > li > .navbar-active {
+    color: #E46E2E;
+}
+.navbar-scroll {
+    animation-duration: 2s;
+    animation-name: smooth;
+    -moz-box-shadow: 1px 1px 1px #999;
+    -webkit-box-shadow: 1px 1px 1px #999;
+    box-shadow: 1px 1px 1px #999;
+}
+.jupytercon-nav > li > .black-tab {
+    color: black;
+}
+.navbar-logo {
+    height: 45px;
+}
+.nav > li > a {
+    font-size: 16px;
+    padding: 12px 16px 10px;
+}
+.nav > li > a:hover {
+    background-color: transparent;
+    color: #E46E2E;
+    -webkit-transition: .2s;
+}
+.nav > li > a:focus {
+    background-color: white;
+}
+.nav > li > a:active {
+    background-color: #F8F8F8;
+}
+.nav > li > a:visited {
+    background-color: #F8F8F8;
+}
+.tab:hover {
+    background-color: transparent;
+    color: #E46E2E;
+}
+.footer {
+    background-color: #979797;
+}
+.footer p {
+    color: white;
+    padding-top: 10px;
+}
+.footer li{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer li::after {
+    content:" |";
+}
+.footer li:last-of-type::after {
+    content:"";
+}
+.footer-text {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/*Main logo animation on the front page of the Jupyter website */
+#main-logo {
+	height: calc(100% - 20px);
+	margin-top: 10px;
+    padding-left: 20px;
 }
 @-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
-
+/*This entire section related to fading is for the front page with the Jupyter logo*/
 .fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-in 1;
     animation:fadeIn ease-in 1;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
 
     -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
+    opacity:0;  /* make things invisible upon start */
 }
 .fade-in.one {
--webkit-animation-delay: 0.3s;
--moz-animation-delay: 0.3s;
-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .fade-in.two {
--webkit-animation-delay: 0.7s;
--moz-animation-delay:0.7s;
-animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay:0.7s;
+    animation-delay: 0.7s;
 }
 .fade-in.three {
--webkit-animation-delay: 1.1s;
--moz-animation-delay: 1.1s;
-animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    animation-delay: 1.1s;
 }
-
-/* //////////////////////////// */
-/*         NAVBAR CODE          */
-/* //////////////////////////// */
-
-.navbar-fixed-top .navbar-brand {
-    padding: 18px 0;
-}
-.navbar {
-    background-color: white;
-    -webkit-transition: .2s;
-}
-.navbar-header .icon-bar {
-    background-color: #E46E2E;
-}
-.navbar-scroll .navbar-inner{
-    border-bottom: 1px solid #979797;
-}
-.navbar-scroll .navbar-inner .dropdown-menu {
-    border-top: 1px solid #979797;
-}
-.nav > li:hover {
-    background-color: #f6f6f6
-}
-.nav > li > a {
-    padding: 30px 0px 30px 0px;
-    color: #313940;
-}
-.nav > li > a:hover {
-    background-color: #f6f6f6;
-    color: black;
-}
-.nav > li > a:focus {
-    background-color: #f6f6f6;
-}
-.nav .open > a, .nav .open > a:focus {
-    background-color: #f6f6f6;
-}
-.nav li:hover {
-    background-color: #f6f6f6;
-}
-.nav a {
-    width: 140px;
-    
-}
-.nav li{
-    padding: 0 0 0 0;
-}
-#carrot {
-    margin-left: 1px;
-}
-.tab {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    color: #767474;
-}
-.tabs:hover a {
-    color:black;
-}
-.dropdown{
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-}
-.dropdown-menu {
-    min-width: 0px;
-    box-shadow: none;
-    border: none;
-    background-color: #f6f6f6;
-    color: white;
-    padding: 0 0 0 0;
-}
-.dropdown:hover .dropdown-menu {
-    color: white;
-    display: block;
-}
-.dropdown-menu > li > a {
-    padding: 10px 18px 10px 18px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #313940;
-}
-.dropdown-menu > li > a:hover {
-    color: white;
-    background-color: #FF944D;
-}
-ul.nav.navbar-nav.navbar-right {
-    padding: 0 0 0 0;
-}
-.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-   max-height: none;
-}
-
-@media (max-width: 1200px) {
-   .nav > li > a {
-       font-size: 14px;
-       font-weight: 400;
-   }
-   .nav a {
-       width: 110px;
-   }
-   .dropdown-menu > li > a {
-        font-size: 13px;
-    }
-}
-@media(max-width:992px)  {
-
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-
-    .nav > li > a {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
-
-    .nav > li > a:hover {
-       background-color: #E7E7E7;
-       color: black;
-    }
-
-    .nav > li > a:focus {
-        background-color: #E7E7E7 !important;
-    }
-    .dropdown-menu > li > a {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
-    .dropdown-menu > li  {
-       background-color: #f6f6f6;
-    }
-    .dropdown-menu {
-        display: none !important;
-    }
-    .dropdown  a  {
-        text-align: left !important;
-    }
-    .dropdown  a  {
-        padding: 10px 15px 10px 15px !important;
-    }
-    .dropdown {
-        padding-left: 25px;
-    }
-    .navbar-toggle {
-        margin: 23px 0 23px 0;
-        padding: 9px 0 9px 0;
-    }
-    .navbar-toggle {
-        display: block;
-        margin-left: 15px;
-    }
-    .navbar-header {
-        float: none;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav > li {
-        float: none;
-    }
-    .navbar-nav > li > a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .nav a {
-        width: auto;
-    }
-   .navbar-nav .open .dropdown-menu {
-       position: static;
-       float: none;
-       width: auto;
-       background-color: transparent;
-       border: 0;
-       -webkit-box-shadow: none;
-       box-shadow: none;
-    } 
-    .nav:first-child {
-        border-top: 2px solid #F2F2F2;
-    }
-    .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
-        border-color: #F2F2F2;
-    }
-   .navbar-scroll .navbar-inner .dropdown-menu > :first-child {
-        border-top: none;
-    }
-    .open .dropdown-menu {
-        display: block !important;
-    }
-    .collapse.in{
-        display:block !important;
-    }
-    #maintabs a {
-        text-align: left !important;
-    }
-    #maintabs a {
-        padding: 10px 15px 10px 15px;
-    }
-    #carrot {
-        float: right;
-        padding-top: 8px;
-    }
-}
-@media (max-width: 767px) {
-    .navbar-header {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-    }
-    .dropdown  a  {
-        padding: 10px 15px 10px 15px !important;
-
-    }
-    #maintabs a {
-        padding: 10px 15px 10px 15px;
-    }
-}
-
-/*------------------------------------------------*/
-
-.img-container {
-    position: absolute;
-    width: 95%;
-    height: 100%;
-    text-align: center;
-    margin: 0 auto;
-
-}
-.img-container img {
-    vertical-align: center;
-}
-.header {
-    margin: 0 auto;
-    display: block;
-}
-
-
 .jumbotron {
-    margin-top:30px;
     background-color: white;
+    margin-top:30px;
     overflow: hidden;
 }
 .jumbotron img {
     margin: 0 auto;
 }
-.jumbotron-text p{
-    font-size: 21px;
-    line-height: 31px;
+.jumbotron-text {
+    padding-bottom: 32px;
     text-align: center;
+}
+.img-container {
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    width: 95%;
+}
+.img-container img {
+    vertical-align: center;
+}
+
+/* Reusable elements */
+
+/* Header section of each page */
+.header{
+    background-color: #F8F8F8;
     padding-bottom: 30px;
-}
-@media (max-width: 767px){
-    .jumbotron {
-        margin-right: 5%;
-    }
-}
-.notebook-preview p {
-    line-height: 31pt;
-    padding-top: 41px;
-    padding-bottom: 41px;
-    font-size: 21px;
-}
-
-.notebook-features, .architecture, .about-block, .companyuse, .jupyterhub .container {
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-.notebook-features h2{
-    font-size: 21px;
-    line-height: 1.5;
-    color:#766A6A;
-}
-
-.notebook-features p a {
-    color:gray;
-    font-weight: 500;
-    text-decoration: underline;
-}
-
-.notebook-features p a:hover {
-    color: rgb(224, 103, 29);
-}
-.notebook-features p{
-    padding-top: 26px;
-    font-size: 15px;
-    line-height: 1.5;
-}
-@media(max-width:992px) {
-    .language-set #feature {
-        display: block;
-    }
-    .notebook-preview img {
-        margin: 0 auto;
-    }
-    #notebookicon {
-        display: block;
-        margin: 0 auto;
-        padding-bottom: 10px;
-    }
-    .notebook-preview h1 {
-        text-align: center;
-    }
-}
-@media(max-width:1200px) {
-
-    .notebook-features .language-set h2{
-        padding-top: 0px;
-    }
-    .notebook-features #feature {
-        padding-top: 4px;
-    }
-}
-@media(max-width:992px) {
-    .notebook-features  img {
-        margin: 0 auto;
-        width: 125px;
-    }
-    .notebook-features p, .notebook-features h2, .notebook-preview p {
-        text-align: center;
-    }
-    .share-set, .widget-set, .data-set {
-        padding-top: 40px;
-    }
-}
-@media(max-width:1200px) {
-
-    .notebook-preview p {
-        line-height: 25pt;
-        font-size: 15pt;
-    }
-}
-.install-prompt {
-    background-color: #FDFDFD;
-    border-style: solid;
-    border-top-color: #979797;
-    border-bottom-color: #979797;
-    border-right-style: none;
-    border-left-style: none;
-    border-width: thin;
-
-}
-.install-prompt .content {
-    padding-top: 4%;
-    padding-bottom: 4%;
-}
-
-.buttons {
-    font-size: 19.24px;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-.buttons a{
-    background-color: #E46E2E;
-    padding: 13px 26px;
-    border-radius: 5.82px;
-    color: white;
-    text-decoration: none;
-    box-shadow: 0px 3px #863001;
-}
-#box2 {
-    padding: 13px 29px;
-}
-@media(max-width:509px) {
-    #box2 {
-        margin-top: 20px;
-    }
-}
-.buttons a:hover{
-    background-color: #F27624;
-    -webkit-transition: .2s;
 }
 
-.companyuse ul {
-    text-decoration: none;
-    padding-left: 0px;
+/* Section elements */
+/* Section classes used for particular sections within a page. Sections should differ in background color when used next to each other */
+.section-white {
+    background-color: white;
+    padding: 56px 0;
+}
+.section-grey {
+  background-color: #fafafa;
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+  padding: 56px 0;
+}
+/* Used to specifying when a section is at the top or bottom of the page to apply appropriate border */
+.top-section-border {
+    border-top: 1px solid #E0E0E0;
+}
+.bottom-section-border {
+    border-bottom: 1px solid #E0E0E0;
+}
+.section-content {
+    display: block;
     margin: 0 auto;
 }
-.companies h2{
-    padding-bottom: 30px;
+/* Icon above section header */
+.section-icon {
+    display: block;
+    margin: 0 auto;
+}
+/* Header for each section */
+.section-header {
+    margin: 12px auto 8px;
+    text-align: center;
+}
+/* Used for descriptions of sections underneath section headers*/
+.support-paragraph {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Orange action button */
+.orange-button {
+    background-color: #E46E2E;
+    border-radius: 5.82px;
+    box-shadow: 0 3px #863001;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding: 13px 26px;
+    text-align: center;
+    text-decoration: none;
+
+}
+.orange-button:hover {
+    background-color: #F27624;
+    color: white;
+    text-decoration: none;
+}
+.orange-button:active, .orange-button:focus {
+    background-color: #DC601C;
+    color: white;
+    text-decoration: none;
+}
+
+/* Jupyter Notebook highlight section on front page */
+.nb-highlight-text {
+    margin-top: 60px;
+}
+.notebook-icon {
+    height: auto;
+    margin-right: 12px;
+    width: 60px;
+}
+/* Give space between the notebook features (4 features) on front page and the     img + description */
+.notebook-features {
+    margin-top: 32px;
+}
+.notebook-features p{
+    padding-top: 16px;
+}
+.nb-desc {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Install prompt on front page */
+.install-prompt {
+    background-color: #FAFAFA;
+    border-bottom-color: #BDBDBD;
+    border-left-style: none;
+    border-style: solid;
+    border-top-color: #BDBDBD;
+    border-width: thin;
+    border-right: 0px;
+    padding: 4px 0 24px 0;
+    text-align: center;
+}
+.prompt-header {
+    margin-bottom: 16px;
+}
+
+/* Companies section for only "Currently in use" (this section acts differently than customer logos in the "About" section of the site) */
+
+/*Section-center is used to center the companies on the home page & get rid of padding on left associated with ul*/
+.section-center {
+    text-align: center;
 }
 .companies li {
-    display: inline-block;
-    vertical-align: center;
-    width: 18%;
-    padding: 2%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    display: inline-block;
+    padding: 2%;
+    vertical-align: center;
+    width: 18%;
 }
-
 .companies .col img{
     display: block;
     width: 100%
 }
-@media(max-width:1200px) {
-    .companies li{
-        width:23%;
-    }
-}
-@media(max-width:767px) {
-    .companies li {
-        width: 30%;
-    }
-    body {
-        padding-top: 80px;
-    }
-}
 .greydout {
-    -webkit-opacity: 0.065;
     -moz-opacity: .065;
+    -webkit-opacity: 0.065;
     opacity: 0.65;
     -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 .greydout:hover {
-    webkit-opacity: 1;
-    moz-opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
     opacity: 1;
 }
 
-.jupyterhub {
-    background-color: #FDFDFD;
-}
-.jupyterhub .container {
-    border-style: solid;
-    border-top-color: #979797;
-    border-bottom-color: #979797;
-    border-right-style: none;
-    border-left-style: none;
-    border-width: thin;
-}
-.featuremiddle {
+/* JupyterHub section on front page */
+/* Feature-middle is for the JupyterHub features that are in the middle that need to be offset to sit on the track */
+.feature-middle {
     margin-top: 40px;
 }
-.hubdescription p {
-    padding-top: 26px;
-    font-size: 21px;
-    line-height: 1.5;
-}
-.hubfeature h2 {
-    font-size: 21px;
-    line-height: 1.5;
+.hubfeature {
     text-align: center;
-    color: #766A6A;
-}
-.hubfeature p {
-    font-size: 15px;
-    line-height: 1.5;
-    text-align: center;
-    color: #766A6A;
-    padding-top: 2px;
 }
 .hubfeature img {
     margin: 0 auto;
 }
 .hubfeatures {
-    padding-top: 50px;
     background: url("../assets/line.svg");
     background-position:  top center;
     background-repeat: no-repeat;
+    /* Padding that is used to make the hubfeature circles sit on track */
+    padding-top: 48px;
 }
-@media(max-width:992px) {
-    .hubdescription {
-        text-align: center;
-        padding-top: 10%;
-    }
-    .hubfeatures{
-        background: none;
-    }
-    #data {
-    padding-top: 40px;
-    }
-    .hubfeature h2 {
-        text-align: center;
-    }
-    #hublogo {
-        width: 60%;
-    }
-}
-.architecturedescription p {
-    padding-top: 26px;
-    font-size: 21px;
-    line-height: 1.5;
-}
-.architecturecontent {
-    padding-top: 26px;
-    margin: 0 auto;
-    text-align: center;
-}
+
+/* Architecture section on front page */
 .arcfeature {
-    font-size: 21px;
-    text-align: center;
+    background-color: white;
+    border: 1px solid #CCC;
     border-radius: 5px;
     height: 300px;
-    width: 300px;
     margin: 0 auto;
-    border: 1px solid #CCC;
+    text-align: center;
+    width: 300px;
 }
-.arcfeature .front img {
-    margin-top: 15px;
+.arcfeature .front img, .arcfeature .front2 img, .arcfeature .front3 img {
     margin-bottom: 40px;
-}
-.arcfeature .front2 img {
     margin-top: 15px;
-    margin-bottom: 40px;
-}
-.arcfeature .front3 img {
-    margin-top: 15px;
-    margin-bottom: 40px;
 }
 .arcfeature .back p {
     margin-top: 40px;
 }
+/* Specific grey button used on each card in the Architecture section on the front page of the site */
 .arc-button {
     background-color: #8D8D8D;
-    box-shadow: 0px 3px #595959;
-    padding: 8px 26px;
     border-radius: 5.82px;
+    box-shadow: 0 3px #595959;
     color: white;
+    font-size: 20px;
+    padding: 8px 26px;
     text-decoration: none;
 }
 
 #arcfeature1 a:hover, #protocol a:hover, #kernel a:hover {
     background-color: #DB5106;
-    box-shadow: 0px 3px #863001;
+    box-shadow: 0 3px #863001;
 }
 .card {
     display: block;
+    height: 100%;
     margin: 0 auto;
     text-align:center;
-    height: 100%;
     vertical-align: center;
 }
+/* Used to make cursor turn to link specific cursor when hovering over architecture buttons */
 .bt, .bt1, .bt2 {
     cursor: default;
 }
 
-#block3 {
-    margin-bottom: 42px;
-    margin-top: 35px;
-}
-
-.card .front {
-    width: 275px;
-    height: 275px;
-    transition: transform 0.3s linear 0s;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
-
+/* Styling for each card in the architecture section on front page. Each card needs it's own front class to work with the javascript associated with the cards */
+.card .front, .card .front2, .card .front3 {
     -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-         -o-backface-visibility: hidden;
-            backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 275px;
     position: absolute;
     text-align: center;
-}
-.card .front2 {
-    width: 275px;
-    height: 275px;
-    transition: transform 0.3s linear 0s;
     -webkit-transition: -webkit-transform 0.3s linear 0s;
-
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-         -o-backface-visibility: hidden;
-            backface-visibility: hidden;
-    position: absolute;
-    text-align: center;
-}
-.card .front3 {
-    width: 275px;
-    height: 275px;
     transition: transform 0.3s linear 0s;
-    -webkit-transition: -webkit-transform 0.3s linear 0s;
-
-    -webkit-backface-visibility: hidden;
-       -moz-backface-visibility: hidden;
-         -o-backface-visibility: hidden;
-            backface-visibility: hidden;
-    position: absolute;
-    text-align: center;
+    width: 275px;
 }
 .flipped {
-    transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 .content-back p{
+    margin-bottom: 16px;
     margin-top: 10px;
-    margin-bottom: 45px;
-    font-size: 15px;
 }
-#document {
-    margin-bottom: 44px;
-}
-/* The .back element should be rotated at first, facing his back, hidden*/
 .card .back{
-
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-
     text-align: center;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
-
-
-
 .arcfeature a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 .arcfeature img {
     margin: 0 auto;
@@ -684,11 +402,315 @@ ul.nav.navbar-nav.navbar-right {
     display: inline-block;
 }
 
-@media(max-width:992px) {
-    #arcicon1 {
+/*About Page */
+/* Used to position the replacement SVG image when a screen is too small for the D3 visualization of contributors */
+#visualization svg{
+    display: block;
+    margin: 0 auto;
+}
+
+/* .Card-header, .card-info, .card-link, and .material are used for cards within the steering council section of the page. */
+.council-member-photo {
+    width: 200px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-top: 0px;
+    margin-left: -15px;
+}
+.card-header {
+    float:left;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: left;
+}
+.card-info {
+    float:left;
+    font-size: 13px;
+    margin-top: 0;
+    text-align: left;
+}
+.card-link a {
+    color: #F27624;
+    float: left;
+    font-size: 15px;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+}
+.card-link a:hover {
+    text-decoration: none;
+}
+.material {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: inline-block;
+    height: 290px;
+    margin: 1rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    width: 200px;
+}
+
+/* Styling for the Sponsor logos on About page*/
+.sponsor {
+    margin: 16px 0;
+}
+.company-logo {
+    height: auto;
+    width: 75%;
+}
+
+/* Used to style the clickable tabs within the governance section */
+.clickable{
+    cursor: default;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.clickable:hover {
+    color: #E46E2E
+}
+
+/* Active state when a tab in the governance section is selected */
+.menuClicked {
+    color: #E46E2E;
+}
+
+/* Used to style the description of a particular tab within the governance section */
+.governance-desc {
+    border-color: black;
+    border-color: #979797;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    min-height: 100px;
+    padding: 30px;
+    transition: all 1s;
+}
+
+/* Donate Page */
+.donate-box {
+    background-color: white;
+    border-color: #979797;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    height: 500px;
+    height: 20%;
+    margin-top: 5%;
+    padding: 32px;
+}
+
+/*Community Resources Page */
+
+/* Resource section is used to create a new resource on the community resources page. */
+.resource-section {
+    border-bottom: 1px solid #E8E8E8;
+    padding: 16px;
+    vertical-align: middle;
+}
+/* Used to specify that the last resource should not have a border underneath it's content */
+.resource-section:last-child {
+    border-bottom: none;
+}
+.resource-text {
+    text-align: left;
+    vertical-align: middle;
+}
+.resource-logo {
+    display: block;
+    height: 80px;
+    margin: 0 auto;
+}
+.resource-name {
+     margin-top: 6px;
+}
+.resource-button {
+    margin-top: 32px;
+    text-align: center;
+}
+.resource-button a {
+    background-color: #E46E2E;
+    border-radius: 5.82px;
+    box-shadow: 0 3px #863001;
+    color: white;
+    letter-spacing: 1px;
+    padding: 13px 60px;
+    text-decoration: none;
+    -webkit-transition: .2s;
+}
+.resource-button a:hover {
+    background-color: #F27624;
+}
+
+/* JupyterCon Jumbotron Styling */
+.jupytercon-navbar {
+    background-color: transparent;
+}
+.jupytercon-nav > li > a{
+    color: white;
+}
+.jupytercon-jumbotron {
+    background-image: url(../assets/jupytercon-ny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+    margin-top: 0px;
+    position: relative;
+    top: -70px;
+    margin-bottom: -70px;
+}
+#jupytercon-logo {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 60px;
+}
+.jupytercon-header, .jupytercon-subheader  {
+    color: white;
+    text-align: center;
+}
+.jupytercon-header {
+    margin-bottom: 16px;
+}
+.jupytercon-subheader {
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+.jupytercon-button {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.navbar-toggle > .white-icon-bar {
+    background-color: white;
+}
+
+/* Bootstrap Breakpoint Media Queries */
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .section-white, .section-grey {
+    padding: 5% 0;
+  }
+}
+@media (max-width: 1200px) {
+    .nb-highlight-text {
+        margin-top: 32px;
+    }
+    .notebook-features .language-set h2{
+        padding-top: 0;
+    }
+    .notebook-features #feature {
+        padding-top: 4px;
+    }
+    .notebook-preview p {
+        font-size: 15pt;
+        line-height: 25pt;
+    }
+    .companies li{
+        width:23%;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.375;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.22;
+    }
+    h3 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    h1 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 1.05em;
+    }
+}
+@media (max-width: 992px) {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.11em;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.136em;
+    }
+    h2 {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.153em;
+    }
+    h1 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.25em;
+    }
+    .nb-highlight-text {
+        text-align: center;
+    }
+    .notebook-features {
+        margin-top: 0;
+    }
+    .language-set #feature {
+        display: block;
+    }
+    .notebook-preview img {
+        margin: 0 auto;
+    }
+    .notebook-icon {
         display: block;
         margin: 0 auto;
         padding-bottom: 10px;
+    }
+    .notebook-preview h1 {
+        text-align: center;
+    }
+    .notebook-features  img {
+        margin: 0 auto;
+        width: 125px;
+    }
+    .notebook-features {
+        text-align: center;
+    }
+    .notebook-feature {
+        padding-top: 40px;
+    }
+    .hubfeatures{
+        background: none;
+    }
+    #data {
+        padding-top: 40px;
+    }
+    .hubfeature h2 {
+        text-align: center;
+    }
+    #hublogo {
+        width: 60%;
     }
     .architecturedescription h2 {
         text-align: center;
@@ -696,355 +718,123 @@ ul.nav.navbar-nav.navbar-right {
     .architecturedescription p {
         text-align: center;
     }
-}
-@media (min-width: 1200px) {
-    .notebook-features, .companyuse, .jupyterhub .container, .architecture, .install-prompt .content {
-        padding-top:75px;
-        padding-bottom: 75px;
+    .donate-box {
+        margin-top: 10%;
     }
-    .install-prompt .content{
-        padding-top: 40px;
-        padding-bottom: 40px;
+    .resource-section {
+        height: 400px;
+        padding: 10px 0 30px;
+    }
+    .resource-section:nth-child(even) {
+        border-left: 1px solid #E8E8E8;
+    }
+    .resource-section img {
+        margin-top: 15px;
+        padding-bottom: 0;
+    }
+    .resource-content {
+        padding-top: 48px;
+    }
+    .resource-text {
+        padding-top: 0;
+        text-align: center;
+    }
+    .nav>li>a {
+        font-size: 13px;
+        letter-spacing: 1px;
     }
 }
+/* Small devices (tablets, 768px and up) */
+@media(min-width:768px) {
 
-/*About Page */
-
-.header{
-    padding-bottom: 30px;
-    text-align: center;
-    background-color: #F6F6F6;
-}
-.header h1 {
-    font-size: 41.16px;
-}
-.header p {
-    font-size: 21px;
-}
-.supportparagraph {
-    font-size: 15px;
-    line-height: 1.5;
-}
-@media (max-width: 992px) {
-    .header h1 {
-        font-size: 34px;
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
     }
-    .header p {
+    .tab {
+        text-align: center;
+    }
+    .follow {
+        margin-top: 15px;
+    }
+    .navbar-toggle {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
+    h4 {
         font-size: 18px;
-        padding-top: 20px;
+        font-weight: 500;
+        line-height: 1.11em;
     }
-    .supportparagraph {
-        font-size: 10.71pt;
+    h3 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.136em;
     }
-}
-.about-block {
-    text-align: center;
-}
-.about-block img {
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-}
-#visualization {
-    display: block;
-    margin: 0 auto;
-    padding-top:40px;
-}
-
-.row1 {
-    padding-top: 5%;
-}
-.col6 {
-    display: inline-block;
-    vertical-align: top;
-    min-height: 1px;
-    position: relative;
-    margin: 20px 0;
-    width: 240px;
-}
-.customerLogo {
-    height: 100px;
-}
-.logo-fix {
-    width: 200px;
-}
-.gray {
-    background-color: #F9F9F9;
-}
-.steering-council {
-    margin: 0 auto;
-    display: block;
-}
-.card-header {
-    text-align: left;
-    float:left;
-    font-size: 19px;
-    margin-top: 10px;
-}
-.card-info {
-    float:left;
-    font-size: 15px;
-    text-align: left;
-    margin-top: 0px;
-}
-.card-link a {
-    float: left;
-    font-size: 15px;
-    text-align: left;
-    text-transform: uppercase;
-    color: #F27624;
-    line-height: 1;
-}
-.card-link a:hover {
-    text-decoration: none;
-}
-.material {
-  background: #fff;
-  border-radius: 2px;
-  display: inline-block;
-  height: 130px;
-  margin: 1rem;
-  position: relative;
-  width: 200px;
-}
-
-.material-1 {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.2s ease-in-out;
-}
-
-
-.transparent {
-    background-color: white;
-}
-
-.menu {
-    margin-top: 20px;
-
-}
-.institutional .clicky{
-    display: inline-block;
-    text-decoration: none;
-    font-size: 21px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    cursor: default;
-}
-
-.clicky:hover {
-    color: #E46E2E
-}
-
-.items {
-    border-color: black;
-    border-width: thin;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: #979797;
-    padding: 30px;
-    transition: all 1s;
-    min-height: 100px;
-}
-.content-gov {
-    padding-left: 20px;
-    padding-right: 35px;
-    color: #818181;
-}
-
-
-#institutional {
-    background-color: #F9F9F9;
-}
-
-.menuClicked {
-    color: #E46E2E;
-}
-
-@media (max-width: 509px) {
-    .items {
-        padding:10px;
-        min-height:0px;
+    h2 {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.153em;
     }
-
-    .content-gov {
-        margin: 0px;
-        padding: 10px;
+    h1 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.25em;
+    }
+    .navbar-header {
+        margin-bottom: 0;
+    }
+    .navbar-toggle {
+        padding-top: 10px;
+    }
+    .navbar-logo {
+        height: 40px;
+        margin-top: 6px;
+    }
+    .companies li {
+        width: 30%;
+    }
+    body {
+        padding-top: 50px;
+    }
+    .jumbotron {
+        margin-right: 5%;
+    }
+    .jupytercon-jumbotron {
+        margin-right: 0px;
     }
 }
-
-#footer1 {
-    background-color: #979797;
-}
-.navbar-bottom p {
-    color: white;
-    padding-top: 10px;
-}
-.navbar-bottom li{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-}
-.navbar-bottom a {
-    text-decoration: none;
-    color: white;
-}
-.navbar-bottom li::after {
-    content:" |";
-}
-.navbar-bottom li:last-of-type::after {
-    content:"";
-}
-
-@media (min-width: 510px) {
+/* Extra small devices (these are mostly fixes to make sure elements act correctly to look good) */
+@media (min-width: 509px) {
     .follow {
         float: right !important;
     }
-    .navbar-bottom ul {
+    .footer ul {
         float: left;
     }
 }
-@media (max-width: 509px) {
+@media(max-width:509px) {
+    .install-button {
+        margin-top: 20px;
+    }
+    .items {
+        min-height:0;
+        padding:10px;
+    }
     .follow {
         display: block;
         margin: 0 auto;
     }
-    .navbar-bottom .container {
-        text-align: center;
+    .footer {
         padding-bottom: 15px;
+        text-align: center;
     }
-    .navbar-bottom ul {
+    .footer ul {
         float: left;
     }
-}
-@media (min-width: 768px) {
-    .follow {
-        margin-top: 15px;
-    }
-}
-#footer-text {
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
-/* Widgets Page */
-.widgets-paragraph {
-    font-size: 15px;
-    line-height: 1.5;
-    padding-top: 26px;
-}
-
-/* Donate Page */
-#donate-paragraph {
-    font-size: 15px;
-    line-height: 1.5;
-}
-.donate-box {
-    background-color: white;
-    height: 500px;
-    border-radius: 8px;
-    border-color: #979797;
-    border-style: solid;
-    border-width: 1px;
-    padding-left: 3px;
-    margin-top: 5%;
-    height: 20%;
-}
-.donate-box img, .donate-box p, #donate-formatting {
-    padding-top: 25px;
-    padding-left: 25px;
-}
-.donate-box p {
-    font-size: 15px;
-    line-height: 1.5;
-    padding-right: 25px;
-}
-#donate-button {
-    background-color: #E46E2E;
-    padding: 13px 26px;
-    border-radius: 5.82px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    box-shadow: 0px 3px #863001;
-    margin-bottom: 25px;
-}
-
-#donate-button:hover {
-    text-decoration: none;
-    background-color: #DB5106;
-    box-shadow: 0px 3px #863001;
-}
-
-#donate-link {
-    text-decoration: none;
-}
-
-/*Community Page */
-
-.community-section {
-    padding: 17px;
-    border-bottom: 1px solid #E8E8E8;
-    height: 160px;
-}
-.community-text {
-    padding-top: 9px;
-    text-align: left;
-    vertical-align: middle;
-}
-.community-button {
-    margin-top: 48px;
-}
-.community-button a {
-    background-color: #E46E2E;
-    padding: 13px 60px;
-    border-radius: 5.82px;
-    text-decoration: none;
-    box-shadow: 0px 3px #863001;
-    color: white;
-    letter-spacing: 1px;
-    -webkit-transition: .2s;
-}
-.community-button a:hover {
-    background-color: #F27624;
-}
-
-.community-section:last-child {
-    border-bottom: none;
-}
-
-#github-break {
-    display: none;
-}
-@media (max-width: 992px) {
-    .donate-box {
-        margin-top: 10%;
-    }
-    .community-section {
-        padding: 0px;
-        padding-top: 10px;
-        padding-bottom: 30px;
-        height: 400px;
-    }
-    .community-text {
-        padding-top: 0px;
-        text-align: center;
-    }
-    .community-section:nth-child(even) {
-        border-left: 1px solid #E8E8E8;
-    }
-    .community-section img {
-        padding-bottom: 0px;
-        margin-top: 15px;
-    }
-    #github-break {
-        display: inline;
-    }
-
-
-}
-.community {
-    margin: 0 auto;
-    display: block;
-    padding: 0px 0px;
 }

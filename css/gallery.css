@@ -1,3 +1,25 @@
+.jupyter-widget-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 0 0 16px 0;
+}
+
+.jupyter-widget-header h2 {
+    display: inline;
+}
+
+.img-scaling {
+    height: 32px;
+    vertical-align: top;
+}
+
+.gallery-title {
+    font-size: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+
 .tabs-left > .nav-tabs {
   border-bottom: 0;
 }
@@ -10,9 +32,9 @@
 .tab-content > .active,
 .pill-content > .active {
   display: block;
-  margin-top: 26px;
   margin-bottom: 26px;
-  min-height: 600px;
+  margin-top: 26px;
+  min-height: 1100px;
 }
 
 .tabs-left > .nav-tabs > li {
@@ -20,23 +42,23 @@
 }
 
 .tabs-left > .nav-tabs > li > a{
-  min-width: 200px;
-  margin-right: 0;
   margin-bottom: 3px;
+  margin-right: 0;
+  min-width: 200px;
 }
 
 .tabs-left > .nav-tabs {
-  float: left;
-  height: 600px;
-  margin-right: 19px;
   border-right: 1px solid #ddd;
+  float: left;
+  height: 1100px;
+  margin-right: 19px;
 }
 
 .tabs-left > .nav-tabs > li > a {
-  margin-right: -1px;
   -webkit-border-radius: 4px 0 0 4px;
-     -moz-border-radius: 4px 0 0 4px;
-          border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  margin-right: -1px;
 }
 
 .tabs-left > .nav-tabs > li > a:hover,

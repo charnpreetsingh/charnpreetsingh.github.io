@@ -1,5 +1,7 @@
 # Jupyter's main website
 
+[![Build Status](https://travis-ci.org/jupyter/jupyter.github.io.svg?branch=master)](https://travis-ci.org/jupyter/jupyter.github.io)
+
 This is the source to [Jupyter.org](http://jupyter.org/).
 
 # Build instruction. 
@@ -38,10 +40,10 @@ The **navbar** is in `_data/nav.yml` and look like that:
 head:
     - Home
     - title: Install
-      url: http://jupyter.readthedocs.org/en/latest/install.html
+      url: https://jupyter.readthedocs.io/en/latest/install.html
     - About
     - title: Documentation
-      url: http://jupyter.readthedocs.org/en/latest/install.html
+      url: https://jupyter.readthedocs.io/en/latest/install.html
     - title: Blog
       url: https://blog.jupyter.org
     - Donate
@@ -78,4 +80,11 @@ Add commit (and don't forget to add to `_data/nav.yml`
 
 `navbar_gray: true` start the navbar with a grey background if you need it. 
 
+# Continuous Integration Testing on Travis
+
+Travis will run and test:
+
+- jekyll build
+- html-proofer
+- csslint
 
